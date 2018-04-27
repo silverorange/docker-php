@@ -9,4 +9,4 @@ RUN . /etc/apache2/envvars && chown -R "$APACHE_RUN_USER:$APACHE_RUN_GROUP" /so
 WORKDIR /so/app
 RUN rmdir /var/www/html
 RUN ln -sf /so/app/www /var/www/html
-COPY app.conf /etc/apache2/sites-available/000-default.conf
+COPY standard/app.conf /etc/apache2/sites-available/000-default.conf
